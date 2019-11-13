@@ -6,24 +6,18 @@
     </van-row>
     <!-- 清单列 -->
     <van-row>
-      <van-row class="cart_item" v-for="(item,index) in goodsList" :key="item.id">
+      <van-row class="cart_item" v-for="(item) in goodsList" :key="item.id">
         <van-col :span="2" class="checkbox">
-          <van-checkbox @change="ischecked" v-model="cartList[index].ischecked" />
+          <van-checkbox v-model="cartList.info[item.id].ischecked" />
         </van-col>
         <van-col :span="22">
-          <van-card
-            :num="cartList[index].num"
-            :price="item.price"
-            :desc="item.goods_name"
-            :title="item.goods_name"
-            :thumb="item.image"
-          >
+          <van-card :price="item.price" :title="item.goods_name" :thumb="item.image">
             <div slot="num">
-              <van-stepper @change="ischecked" v-model="cartList[index].num" />
+              <van-stepper v-model="cartList.info[item.id].count" />
             </div>
             <div slot="bottom" class="xiaoji">
               <span class="xiaoji2">小计:</span>
-              &yen;{{item.price * cartList[index].num}}元
+              &yen;{{item.price * cartList.info[item.id].count}}元
             </div>
           </van-card>
         </van-col>
@@ -31,8 +25,8 @@
     </van-row>
     <!--合计  -->
     <van-row class="heji">
-      <van-submit-bar :price="checkedPrice" button-text="提交订单">
-        <van-checkbox v-model="checked" @click="checkAll">全选</van-checkbox>
+      <van-submit-bar :price="totalPrice" button-text="提交订单">
+        <van-checkbox v-model="checkAll">全选</van-checkbox>
         <span slot="tip">
           你的收货地址不支持同城送,
           <span>修改地址</span>
@@ -46,47 +40,57 @@
 export default {
   data () {
     return {
-      cartList: [],
+      cartList: JSON.parse(window.localStorage.getItem('cartList')),
       goodsList: [],
-      checked: false,
-      checkedPrice: 0
+      checked: false
     }
   },
   methods: {
     getCart () {
-      this.cartList = JSON.parse(window.localStorage.getItem('cartList'))
-      let cartIds = []
-      this.cartList.forEach(item => {
-        cartIds.push(item.id)
-      })
-      console.log(cartIds)
       this.$http
         .get('/goods', {
           params: {
-            goodsList: cartIds
+            goodsList: this.cartList.ids.join()
           }
         })
         .then(res => {
           this.goodsList = res.data.data
           console.log(this.goodsList)
-          this.ischecked()
         })
-    },
-    ischecked () {
-      let allCheckprice = 0
-      this.cartList.forEach((item, index) => {
-        if (item.ischecked) {
-          allCheckprice += this.goodsList[index].price * item.num * 100
+    }
+  },
+  watch: {
+    cartList: {
+      deep: true,
+      handler: function () {
+        localStorage.setItem('cartList', JSON.stringify(this.cartList))
+      }
+    }
+  },
+  computed: {
+    totalPrice: function () {
+      let sum = 0
+      this.goodsList.forEach((item, index) => {
+        if (this.cartList.info[item.id].ischecked) {
+          sum += item.price * this.cartList.info[item.id].count * 100
         }
       })
-      window.localStorage.setItem('cartList', JSON.stringify(this.cartList))
-      this.checkedPrice = allCheckprice
+      return sum
     },
-    checkAll () {
-      this.cartList.forEach(item => {
-        item.ischecked = !this.checked
-      })
-      window.localStorage.setItem('cartList', JSON.stringify(this.cartList))
+    checkAll: {
+      get: function () {
+        for (let i in this.cartList.info) {
+          if (!this.cartList.info[i].ischecked) {
+            return false
+          }
+        }
+        return true
+      },
+      set: function (newValue) {
+        for (let i in this.cartList.info) {
+          this.cartList.info[i].ischecked = newValue
+        }
+      }
     }
   },
   created () {
@@ -108,8 +112,8 @@ export default {
 
 .checkbox {
   position: relative;
-    left: 6px;
-    top: 44px;
+  left: 6px;
+  top: 44px;
 }
 
 .van-submit-bar {

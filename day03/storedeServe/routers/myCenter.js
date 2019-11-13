@@ -16,7 +16,6 @@ router.get("/api/v1/goods", (req, res) => {
         error: error
       })
     } else {
-      console.log(data)
       res.json({
         ok: 1,
         data: data

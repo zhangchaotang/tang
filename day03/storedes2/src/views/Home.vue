@@ -60,24 +60,34 @@ export default {
         })
     },
     addCart (id) {
-      console.log(id)
-      let addCartList = [{ id: id, num: 1, ischecked: false }]
+      let addCartList = {
+        ids: [id],
+        info: {
+          [id]: {
+            count: 1,
+            ischecked: false
+          }
+        }
+      }
       let cartList = window.localStorage.getItem('cartList')
       if (cartList === null) {
         window.localStorage.setItem('cartList', JSON.stringify(addCartList))
       } else {
         cartList = JSON.parse(cartList)
-        let index = cartList.findIndex(item => {
-          return item.id === addCartList[0].id
-        })
-        if (index !== -1) {
-          cartList[index].num++
-          window.localStorage.setItem('cartList', JSON.stringify(cartList))
+        if (cartList.ids.indexOf(id) !== -1) {
+          cartList.info[id].count++
         } else {
-          window.localStorage.setItem('cartList', JSON.stringify(cartList.concat(addCartList)))
+          cartList.ids.push(id)
+          cartList.info[id] = {
+            count: 1,
+            ischecked: false
+          }
         }
+        window.localStorage.setItem('cartList', JSON.stringify(cartList))
       }
-      this.cartNumChange(JSON.parse(window.localStorage.getItem('cartList')).length)
+      this.cartNumChange(
+        JSON.parse(window.localStorage.getItem('cartList')).ids.length
+      )
     }
   },
   created () {
