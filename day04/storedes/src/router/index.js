@@ -21,6 +21,11 @@ const routes = [
   {
     path: '/register',
     component: () => import('../views/Register.vue')
+  },
+  // 商品详情页
+  {
+    path: '/details',
+    component: () => import('../views/Details.vue')
   }
 ]
 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>聊天室</title>
+</head>
+<body>
+
+  <label>
+    <input type="text" id="message" placeholder="请输入消息">
+    <button id="send">发送</button>
+
+    <ul class="content">
+
+    </ul>
+  </label>
+
+
+  <script src="./node_modules/socket.io-client/dist/socket.io.js"></script>
+  <!-- 链接聊天服务器 -->
+  <script>
+  let roomId = 1234
+
+  // 监听聊天室 传入聊天室id
+  let socket = io('http://127.0.0.1:5555',{
+    query: {
+      room: roomId
+    }
+  })
+  // 接收 大厅消息 
+  socket.on('message', (data)=>{
+    console.log(data)
+  })
+
+
+  // 向本聊天室发送消息
+  function send(message) {
+    socket.emit('ontify', message)
+  }
+
+  let sends = document.querySelector("#send")
+  let message = document.querySelector("#message")
+  let ul = document.querySelector(".content")
+
+
+
+  sends.onclick = function () {
+    // console.log()
+    send(message.value)
+  }
+
+  // 接收本聊天室消息
+  socket.on('ontify', (data)=>{
+    ul.innerHTML += `<li>${data}</li>`
+  })
+  </script>
+</body>
+</html>
