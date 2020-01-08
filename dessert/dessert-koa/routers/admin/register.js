@@ -18,7 +18,7 @@ router.post(baseUrl + '/register', async ctx => {
     a_password
   }
 
-  let [row] = await db.query('SELECT * FROM admin WHERE a_name = ?', a_name)
+  let row = await db.query('SELECT * FROM admin WHERE a_name = ?', a_name)
 
   if (row.length > 0) {
 
@@ -28,7 +28,7 @@ router.post(baseUrl + '/register', async ctx => {
     }
 
   } else {
-    let [row] = await db.query('INSERT INTO admin SET ?', data)
+    let row = await db.query('INSERT INTO admin SET ?', data)
 
     ctx.body = {
       code: 200,

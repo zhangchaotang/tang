@@ -1,7 +1,9 @@
-const mysql = require('mysql2')
+const mysql = require('mysql-pro')
 
-const {db} = require('../config')
+const { db } = require('../config')
 
-const pool = mysql.createPool(db)
+const pool = new mysql({
+  mysql: db
+});
 
-module.exports = pool.promise()
+module.exports = pool

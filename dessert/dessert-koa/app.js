@@ -24,7 +24,9 @@ app.use(adminLogin.routes())
 // 添加管理员
 const adminRegister= require('./routers/admin/register')
 app.use(adminRegister.routes())
-
+// 商品管理
+const adminGoods= require('./routers/admin/goods')
+app.use(adminGoods.routes())
 
 
 app.use(async ctx => {
