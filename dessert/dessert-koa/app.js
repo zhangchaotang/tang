@@ -18,10 +18,13 @@ app.use(cors())
 app.use(bodyparser())
 
 //  导入路由
-
+// 后台登录
 const adminLogin = require('./routers/admin/login')
-
 app.use(adminLogin.routes())
+// 添加管理员
+const adminRegister= require('./routers/admin/register')
+app.use(adminRegister.routes())
+
 
 
 app.use(async ctx => {

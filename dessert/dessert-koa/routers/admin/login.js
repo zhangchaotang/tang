@@ -9,9 +9,12 @@ const { baseUrl, adminKey } = require('../../config')
 const jwt = require('koa-jsonwebtoken')
 
 router.post(baseUrl + '/login', async ctx => {
+
   let a_name = ctx.request.body.name
   let a_password = ctx.request.body.password
+
   let [row] = await db.query(`SELECT * FROM admin WHERE a_name = ?`, a_name)
+  
   if (row.length !== 0) {
     if (row[0].a_password == a_password) {
       // 生成token
