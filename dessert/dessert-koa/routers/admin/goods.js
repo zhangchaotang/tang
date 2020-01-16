@@ -14,7 +14,7 @@ router.get(baseUrl + '/goods', async ctx => {
   let page_size = ctx.request.query.page_size || 5
   let index = (parseInt(page) - 1) * page_size
 
-  let [row] = await db.query(`SELECT * FROM goods LIMIT ${index},${page_size}`)
+  let row = await db.query(`SELECT * FROM goods LIMIT ${index},${page_size}`)
   ctx.body = {
     code: 200,
     data: row

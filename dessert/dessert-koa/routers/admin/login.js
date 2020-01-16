@@ -8,7 +8,7 @@ const { baseUrl, adminKey } = require('../../config')
 // 引入jwt
 const jwt = require('koa-jsonwebtoken')
 
-router.post(baseUrl + '/login', async ctx => {
+router.post(baseUrl + '/admin/login', async ctx => {
 
   let a_name = ctx.request.body.name
   let a_password = ctx.request.body.password

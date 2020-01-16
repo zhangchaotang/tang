@@ -3,7 +3,7 @@ const koa = require('koa')
 // 2. 创建koa服务
 const app = new koa()
 // 引入 cors包
-const cors = require('koa-bodyparser')
+const cors = require('koa2-cors')
 // 引入bodyParser
 const bodyparser = require("koa-bodyparser")
 
@@ -27,7 +27,9 @@ app.use(adminRegister.routes())
 // 商品管理
 const adminGoods= require('./routers/admin/goods')
 app.use(adminGoods.routes())
-
+// 分类管理
+const adminClassify= require('./routers/admin/classify')
+app.use(adminClassify.routes())
 
 app.use(async ctx => {
   ctx.body = 'Hello World'
@@ -35,4 +37,4 @@ app.use(async ctx => {
 
 
 // 开启koa服务
-app.listen(3000)
+app.listen(9960)
