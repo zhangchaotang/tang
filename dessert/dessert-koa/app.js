@@ -31,6 +31,10 @@ app.use(adminGoods.routes())
 const adminClassify= require('./routers/admin/classify')
 app.use(adminClassify.routes())
 
+
+// 前端首页
+const frontIndex =  require('./routers/front/index')
+app.use(frontIndex.routes())
 app.use(async ctx => {
   ctx.body = 'Hello World'
 })
