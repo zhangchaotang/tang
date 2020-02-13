@@ -9,7 +9,7 @@ const { baseUrl, adminKey } = require('../../config')
 const jwt = require('koa-jsonwebtoken')
 
 // 获取所有分类
-router.get(baseUrl + '/classift', async ctx => {
+router.get(baseUrl + '/classify', async ctx => {
   let row = await db.query('SELECT * FROM classify')
   ctx.body = {
     code: 200,
@@ -18,7 +18,7 @@ router.get(baseUrl + '/classift', async ctx => {
 })
 
 // 点击分类获取下商品
-router.get(baseUrl + '/classift/:id', async ctx => {
+router.get(baseUrl + '/classify/:id', async ctx => {
   let id = ctx.params.id // 获取分类id
   // 开始查询
   let row = await db.query(`SELECT * FROM  classify a 

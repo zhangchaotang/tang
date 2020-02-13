@@ -1,9 +1,18 @@
 import React, { useState } from 'react'
 
-import { Layout, Menu, Breadcrumb, Icon } from 'antd'
+import { Layout, Menu } from 'antd'
 
-const { SubMenu } = Menu;
+import { Link, Route } from 'react-router-dom'
+
+// 引入子组件
+import Classify from './path/Classify'
+import AddGoods from './path/AddGoods'
+import GoodsList from './path/GoodsList'
+import Brand from './path/Brand'
+import SetClassify from './path/SetClassify'
+
 const { Header, Content, Sider } = Layout;
+
 
 export default function Home() {
 
@@ -29,6 +38,17 @@ export default function Home() {
         {
           title: '添加商品',
           path: '/addGoods'
+        },
+        {
+          title: '分类列表',
+          path: '/classifyList'
+        },
+        {
+          title: '品牌管理',
+          path: '/brand'
+        },{
+          title:'分类管理',
+          path:'setClassify'
         }
       ]
     },
@@ -72,30 +92,19 @@ export default function Home() {
               style={{ height: '100%', borderRight: 0 }}
             >
               {navContent[checkTopNav].childer.map((v, k) => {
-                return <Menu.Item key={k}>{v.title}</Menu.Item>
+                return <Menu.Item key={k}> <Link to={v.path}>{v.title}</Link> </Menu.Item>
               })}
             </Menu>
           </Sider>
           <Layout style={{ padding: '0 24px 24px' }}>
             {/* 面包屑 */}
-            <Breadcrumb style={{ margin: '16px 0' }}>
-              <Breadcrumb.Item>Home</Breadcrumb.Item>
-              <Breadcrumb.Item>List</Breadcrumb.Item>
-              <Breadcrumb.Item>App</Breadcrumb.Item>
-            </Breadcrumb>
-            <Content
-              style={{
-                background: '#fff',
-                padding: 24,
-                margin: 0,
-                minHeight: 280,
-                height: '100vh'
-              }}
-            >
-              {
-                checkTopNav
-              }
-            </Content>
+            
+            <Route path='/classifyList' component={ Classify } />
+            <Route path='/addgoods' component={ AddGoods } />
+            <Route path='/goodsList' component={ GoodsList } />
+            <Route path='/brand' component={ Brand } />
+            <Route path='/setClassify' component={ SetClassify } />
+
           </Layout>
         </Layout>
       </Layout>

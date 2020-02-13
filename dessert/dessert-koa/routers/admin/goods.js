@@ -14,10 +14,17 @@ router.get(baseUrl + '/goods', async ctx => {
   let page_size = ctx.request.query.page_size || 5
   let index = (parseInt(page) - 1) * page_size
 
-  let row = await db.query(`SELECT * FROM goods LIMIT ${index},${page_size}`)
+  let row = await db.query(`SELECT a.*,b.showimg1 
+                            FROM goods a LEFT JOIN particulars_img b
+                            ON a.id = b.g_id ORDER BY a.id DESC
+                            LIMIT ${index},${page_size}`)
+
+  let total = await db.query('SELECT COUNT(*) total FROM goods')
+
   ctx.body = {
     code: 200,
-    data: row
+    data: row,
+    total: total[0].total
   }
 })
 
@@ -29,19 +36,49 @@ router.post(baseUrl + '/add/goods', async ctx => {
   let g_price = ctx.request.body.goods_price
   // 商品品牌
   let b_id = ctx.request.body.brand_id
+  // 分类id
+  let c_id = ctx.request.body.c_id
+  // 商品封面
+  let img = ctx.request.body.url
 
   let data = {
     g_name,
     g_price,
     b_id
   }
-  let row = db.query('INSERT INTO goods SET = ?', data)
 
-  if (row.affectedRows) {
+  try {
+    await db.startTransaction();//开启事务
+    // 添加商品
+    let row = await db.executeTransaction('INSERT INTO goods SET ?', data)
+    // 把这个商品添加到对应分类下
+    let classData = {
+      g_id: row.insertId,
+      c_id
+    }
+    let row1 = await db.executeTransaction('INSERT INTO goods_classify SET ?', classData)
+
+    // 给商品添加封面
+    let imgData = {
+      g_id: row.insertId,
+      showimg1: img
+    }
+    let row2 = await db.executeTransaction('INSERT INTO particulars_img SET ?', imgData)
+
+    await db.stopTransaction();//关闭事务,此处应该是提交事务
     ctx.body = {
-      code: 200
+      code: 200,
+      message: '添加商品成功'
+    }
+
+  } catch (e) {
+    console.log(e)
+    ctx.body = {
+      code: 400,
+      error: e
     }
   }
+
 })
 
 // 设置商品属性
@@ -77,7 +114,6 @@ router.delete(baseUrl + '/goods/:id', async ctx => {
     }
   }
 })
-
 
 
 module.exports = router
