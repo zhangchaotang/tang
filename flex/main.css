@@ -1,0 +1,14 @@
+li {
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  list-style: none;
+  background: #f5ba92;
+  text-align: center;
+  line-height: 100px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}

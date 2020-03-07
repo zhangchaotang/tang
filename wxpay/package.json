@@ -1,0 +1,22 @@
+{
+  "name": "wxpay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@alicloud/pop-core": "^1.7.7",
+    "@alicloud/sms-sdk": "^1.1.6",
+    "body-parser-xml": "^1.1.0",
+    "express": "^4.17.1",
+    "md5": "^2.2.1",
+    "qrcode": "^1.4.4",
+    "request": "^2.88.0",
+    "xmlreader": "^0.2.3"
+  }
+}
