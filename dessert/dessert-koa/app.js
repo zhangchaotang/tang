@@ -6,14 +6,9 @@ const app = new koa()
 const cors = require('koa2-cors')
 // 引入bodyParser
 const bodyparser = require("koa-bodyparser")
-
-// const koaBody = require('koa-body'); //解析上传文件的插件
-// app.use(koaBody({
-//   multipart: true,
-//   formidable: {
-//     maxFileSize: 10000 * 1024 * 1024    // 设置上传文件大小最大限制，默认2M
-//   }
-// }))
+// const pv = require('./mid/koa-pv')
+// const session = require('koa-generic-session')
+const Redis = require('koa-redis')
 
 app.on('error', async (err, ctx) => {
   console.error('server error', err);
@@ -24,6 +19,20 @@ app.use(cors())
 
 // 注册bodyparser
 app.use(bodyparser())
+
+// session 加密
+// app.keys = ['keys', 'keyskeys']
+// app.use(session({
+//   store: new Redis()
+// }))
+
+// app.use(
+//   session({
+//     key: 'mt',
+//     prefix: 'mtpr',
+//     store: new Redis()
+//   })
+// )
 
 app.use(require('koa-static')(__dirname + '/public'))
 
@@ -49,13 +58,26 @@ app.use(adminBrand.routes())
 const upload = require('./routers/admin/upload')
 app.use(upload.routes())
 
+// 获取图片验证码
+const cap = require('./routers/front/getCaptcha')
+app.use(cap.routes())
+// 短信校验
+const note = require('./routers/front/note')
+app.use(note.routes())
+
+// 用户注册
+const rejister = require('./routers/front/rejister')
+app.use(rejister.routes())
+// 用户登录
+const login = require('./routers/front/login')
+app.use(login.routes())
+
 // 前端首页
 const frontIndex = require('./routers/front/index')
 app.use(frontIndex.routes())
 app.use(async ctx => {
   ctx.body = 'Hello World'
 })
-
 
 
 

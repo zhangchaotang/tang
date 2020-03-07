@@ -1,0 +1,115 @@
+/* 商品盒子 */
+.goodsBox {
+  display: inline-block;
+  box-shadow: 0px 10px 10px 2px rgb(170, 167, 167);
+  background-color: #ffffff;
+}
+
+/* 商品图片盒子 */
+/* .goodsBox .imgBox {
+  width: 263px;
+  height: 230px;
+} */
+
+.goodsBox .imgBox>img {
+  width: 100%;
+  background: #fafafa center no-repeat;
+  background-size: auto 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.goodsBox>h6,
+.goodsBox>p {
+  padding:0 4px;
+  box-sizing: border-box;
+}
+
+/* 商品名称 */
+.goodsBox>h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 6px;
+  font-family: '微软雅黑';
+}
+
+/* 商品简介 */
+.goodsBox>p {
+  margin: 0;
+  font-size: 14px;
+  color: #616161;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 商品标签 */
+.goodsBox .tags {
+  padding-left: 2px;
+  width: 263px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goodsBox .tag {
+  padding: 0 6px;
+  margin-right: 4px;
+  margin-top: 6px;
+  border-radius: 15px;
+  font-size: 12px;
+  border: 1px solid #9d8374;
+  color: #9d8374;
+  cursor: pointer;
+}
+
+/* 商品价格 和操作按钮盒子 */
+.goodsBox .price-conn {
+  display: flex;
+  padding: 24px 4px;
+  margin-top: 6px;
+  height: 37px;
+  color: #b0986f;
+  border-top: 1px dashed #D5BFA7;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goodsBox .price-conn>span {
+  line-height: 14px;
+  color: #bb9772;
+  font-size: 14px;
+  max-width: 165px;
+}
+
+/* 加入购物车按钮 */
+.goodsBox .price-conn>button {
+  margin-left: 10px;
+  height: 26px;
+  border: none;
+  line-height: 26px;
+  background-color: #9d8374;
+  color: beige;
+  border-radius: 15px;
+  /* 除去点击轮廓 */
+  outline: none;
+  cursor: pointer;
+}
+
+
+/* 飞行盒子 */
+.flyBox {
+  display: none;
+  position: absolute;
+  width: 263px;
+  height: 230px;
+}
+
+.flyBox>img {
+  width: 100%;
+  background: #E91E63 center no-repeat;
+  background-size: auto 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+}

@@ -1,0 +1,39 @@
+
+
+
+.showPersonal {
+  width: 100%;
+  height: 400px;
+  background-color: #fcf1f7;
+}
+
+.userBox {
+  display: flex;
+  justify-content: left;
+  margin-top: 20px;
+}
+
+/* .useOption {
+} */
+
+.userItem {
+  width: 184px;
+  height: 40px;
+  margin-bottom: 4px;
+  line-height: 40px;
+  text-indent: 2em;
+  font-size: 14px;
+  color: #b1678f;
+  background-color: #fcf1f7;
+}
+
+.userActive {
+  font-weight: 600;
+  letter-spacing:2px;
+}
+
+.useShow {
+  margin-left: 20px;
+  height: 600px;
+  width: 960px;
+}

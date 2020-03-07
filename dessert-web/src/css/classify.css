@@ -1,0 +1,47 @@
+.cat-box {
+  margin-top: 25px;
+  margin-bottom: 35px;
+  width: 1200px;
+  border-top: #f2f2f2 solid 1px;
+  border-bottom: #f2f2f2 solid 1px;
+  overflow: hidden;
+  padding: 8px 0;
+}
+
+.cat-list,
+.cat-taset {
+  display: flex;
+  line-height: 50px;
+  height: 50px;
+}
+
+.cta-title {
+  flex: 1;
+  text-align: center;
+}
+
+.cta-content {
+  flex: 20;
+  display: flex;
+  justify-content: left;
+}
+
+
+.cta-content>span {
+  margin: 0 13px;
+  display: block;
+  margin-inline-start: 40px;
+  cursor: pointer;
+}
+
+.cat-active {
+  color: #ffcea1;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  padding: 0 18px;
+}

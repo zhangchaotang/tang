@@ -1,0 +1,73 @@
+.login-box {
+  height: calc(100vh - 200px);
+  background: url(../images/passport-banner.jpg) no-repeat top center;
+}
+
+.login-content {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #442818;
+}
+
+.login {
+  width: 388px;
+  min-height: 364px;
+  padding: 28px 42px;
+  border: 1px #e9e9e9 solid;
+  background: #fff;
+}
+
+.login-btn {
+  margin-top: 20px;
+  width: 100%;
+  height: 44px !important;
+  background-color: #442818 !important;
+  border-color: #442818 !important;
+}
+
+.login-box .ant-input-affix-wrapper {
+  height: 44px !important;
+}
+
+.login-btns {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-btns span {
+  flex: 3;
+}
+
+.login-btns span,
+.login-btns a {
+  color: #9d8374 !important;
+}
+
+.login-btns div {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.security {
+  display: flex;
+  justify-content: space-between;
+}
+
+.svgBox {
+  margin-left: 6px;
+}
+
+.code .ant-btn {
+  min-width: 92px !important;
+}

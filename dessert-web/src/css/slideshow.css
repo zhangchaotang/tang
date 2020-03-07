@@ -1,0 +1,67 @@
+/* 轮播图 样式设置 */
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 622px;
+  line-height: 20px;
+  background: #998484;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide img {
+  width: 100%;
+  background: #E91E63 center no-repeat;
+  background-size: auto 100%;
+  margin: 0 auto;
+}
+
+.ant-carousel .slick-dots li button {
+  width: 30px !important;
+  height: 5px !important;
+  background-color: #48356b !important;
+}
+
+/* 轮播图左右按钮 */
+.slideshow {
+  position: relative;
+}
+
+.slideshow>.leftBun {
+  display: flex;
+  position: absolute;
+  width: 130px;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  opacity: 0.5;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.slideshow>.rightBtn {
+  display: flex;
+  width: 130px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  opacity: 0.5;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.slideshow > .leftBun > img,.slideshow > .rightBtn > img {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.slideshow>.rightBtn:hover >.rightBtn-icon {
+  opacity: 1;
+}
+.slideshow>.leftBun:hover >.leftBun-icon {
+  opacity: 1;
+}

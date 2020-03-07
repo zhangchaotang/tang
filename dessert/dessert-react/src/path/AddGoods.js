@@ -100,7 +100,7 @@ function AddGoods(props) {
         values.url = upImage
         Axios.post('/add/goods', values).then((res) => {
 
-          console.log(res.data)
+          console.log(values)
           if (res.data.code === 200) {
             getData(page, pageSize)
             message.success('添加商品成功！')

@@ -1,0 +1,140 @@
+.goodsParCnt {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.details {
+  position: relative;
+  width: 400px;
+}
+
+.imgList {
+  display: flex;
+  width: 100%;
+  height: 62px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.goodsPar .leftBtn,
+.goodsPar .rightBtn {
+  flex: 1;
+  line-height: 62px;
+  background-color: #eeeeee;
+  cursor: pointer;
+}
+
+.goodsPar .leftBtn>img,
+.goodsPar .rightBtn>img {
+  width: 100%;
+  font-size: 100% auto;
+}
+
+.goodsPar .leftBtn:hover {
+  background-color: #cccccc;
+}
+
+.goodsPar .rightBtn:hover {
+  background-color: #cccccc;
+}
+
+
+.imgListContent {
+  position: relative;
+  flex: 18;
+  overflow: hidden;
+}
+
+.imgListContent>div {
+  position: absolute;
+  display: flex;
+  justify-content: left;
+}
+
+.imgListContent img {
+  width: 64px;
+  margin: 0 4px;
+  background-size: auto 100%;
+}
+
+/* 商品属性 */
+.goodsAttr {
+  margin-left: 30px;
+}
+
+.goodsAttr .name {
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+  width: 580px;
+  height: 40px;
+  font-family: Microsoft YaHei, arial;
+  margin-bottom: 10px;
+}
+
+.goodsAttr .price {
+  background: rgba(232, 232, 232, 0.5);
+}
+
+.goodsAttr .price>p {
+  width: 100%;
+  height: 33px;
+  font-size: 12px;
+  line-height: 33px;
+  color: #666;
+  font-family: "微软雅黑";
+  padding-left: 10px;
+}
+
+
+/* 原价 */
+.goodsAttr .original {
+  font-size: 14px;
+  text-decoration: line-through;
+  font-family: "华文仿宋";
+}
+
+/* 促销价 */ 
+.goodsAttr .promotion {
+  color: #D00;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* 店铺打折 */ 
+.goodsAttr .discount {
+  color: #000;
+  font-weight: 100;
+}
+
+.prop {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.prop > span {
+  flex: 1;
+  line-height: 40px;
+}
+
+.prop > div {
+  flex: 10;
+  display: flex;
+  justify-content: left;
+}
+
+.propItem {
+  width: 50px;
+  height: 40px;
+  margin: 0 4px 4px 0;
+  line-height: 35px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 1px;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+
+.propItem:hover {
+  line-height: 33px;
+  border: 2px solid #c7a360;
+}

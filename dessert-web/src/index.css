@@ -1,0 +1,93 @@
+body,
+ul,
+li,
+p,
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #9d8374 !important;
+}
+
+.common {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* 推荐商品分类 */
+.recClassify {
+  display: flex;
+  width: 100%;
+  margin-top: 50px;
+  justify-content: space-evenly;
+}
+
+.classify-item {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+/* 楼层 */
+.floor {
+  margin-top: 50px;
+}
+
+/* 楼层标题 */
+.floor-title {
+  font-size: 24px;
+  color: #724228;
+  line-height: 36px;
+  width: 1100px;
+  margin: 0 auto 20px;
+}
+
+.floor-title>span {
+  font-size: 14px;
+  color: #8E5D43;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+/* 楼层图片 */
+.floor-img {
+  width: 1100px;
+  height: 250px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.floor-img>img {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #fafafa center no-repeat;
+  background-size: auto 100%;
+}
+
+/* 楼层商品 */
+.floor-goods {
+  display: flex;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.floor-goods-item {
+  margin-top: 10px;
+}
