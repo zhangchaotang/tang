@@ -1,0 +1,90 @@
+#liveFloor {
+  .floor-item {
+    height: 230px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+
+    .ant-card-body {
+      padding: 6px 16px;
+      font-size: 12px;
+      font-family: '微软雅黑';
+
+      .room-title {
+        font-weight: 600;
+        font-size: 12px;
+      }
+
+      .room-content {
+        overflow: hidden;
+
+        .icon {
+          float: left;
+
+          img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+          }
+
+          span {
+            margin-left: 6px;
+            color: #afafaf;
+          }
+        }
+
+        .audience {
+          float: right;
+
+          span {
+            color: #c5c5c5;
+            margin-left: 6px;
+          }
+        }
+      }
+    }
+
+    // 遮罩
+    .room-shade {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 154px;
+      background-color: #000000;
+      opacity: 0;
+      border-radius: 15px;
+      ;
+      transition: all .4s ease-out;
+    }
+
+    .play {
+      position: absolute;
+      top: 34%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(2);
+      width: 50px;
+      height: 50px;
+      display: block;
+      opacity: 0;
+      background: url('https://a.msstatic.com/huya/main3/widget/game-live-item/img/play-icon_fbf7f.png') no-repeat;
+      transition: all .25s ease-out;
+    }
+  }
+
+
+
+
+  .floor-item:hover .play {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .floor-item:hover .room-shade {
+    opacity: 0.5;
+  }
+}

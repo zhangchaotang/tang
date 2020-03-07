@@ -1,0 +1,31 @@
+.operationCol {
+  padding: 10px;
+  background-color: #ffffff;
+
+  .ant-carousel {
+    padding: 0 10px;
+    width: 627px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .left-icon,
+  .right-icon {
+    text-align: center;
+    width: 24px;
+    height: 45px;
+    line-height: 45px;
+    cursor: pointer;
+    border-radius: 3px;
+    background: #eee;
+  }
+
+  .ant-list-grid .ant-col > .ant-list-item{
+    padding: 4px 2px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 0;
+    margin: 0 4px;
+  }
+
+}

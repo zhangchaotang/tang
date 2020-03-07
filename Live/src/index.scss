@@ -1,0 +1,24 @@
+.userIcon {
+  >i {
+    margin: 0 !important;
+  }
+}
+
+#member {
+  // min-height: 804px;
+  min-height: 85vh;
+  padding: 30px 300px;
+  background-color: #f0f2f5;
+
+  .ant-layout-sider {
+    background-color: #f0f2f5;
+  }
+}
+
+.ant-layout-footer {
+  min-height: 8vh;
+}
+
+.ant-layout-header {
+  min-height: 6vh;
+}

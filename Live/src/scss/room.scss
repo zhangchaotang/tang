@@ -1,0 +1,60 @@
+#room {
+  background-color: #ffffff;
+
+  .ant-input-lg,
+  .ant-btn-lg {
+    height: 44px;
+  }
+
+  #socketDom {
+    max-height: 834px;
+    height: 95%;
+    overflow: auto;
+    padding: 0 6px
+  }
+
+  .content {
+    padding: 20px;
+
+    .ant-layout {
+      overflow-x: initial;
+      height: 100%;
+    }
+
+  }
+
+  .ant-layout-header {
+    background-color: #ffffff;
+    padding: 0;
+  }
+
+  .gifttext {
+    margin-left: 10px;
+  }
+
+  .giftimg {
+    width: 36px;
+  }
+
+  .ant-list-item-meta {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1;
+    flex: 1 1;
+    -ms-flex-align: start;
+    font-size: 0;
+    align-items: center;
+  }
+
+  #socketDom {
+    .ant-list-item {
+      border: none;
+    }
+
+    .ant-list-item-meta-avatar {
+      margin-right: 4px;
+    }
+  }
+
+
+}
