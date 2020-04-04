@@ -1,0 +1,285 @@
+/* 提示信息 */
+.close__title {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #777;
+}
+
+.close__box {
+  padding: 8px 16px;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+}
+
+/* 显示收货地址 */
+.close__showsites,
+.close__pay {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #aaa;
+}
+
+/* 标题 */
+.close__biaoti {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.close__sitesContent {
+  height: 51px;
+  overflow: hidden;
+  padding: 4px 20px;
+}
+
+.close__sitesItem {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  justify-content: left;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* 名字 */
+.close__name {
+  width: 120px;
+  border: 1px solid #cccccc;
+  padding: 4px 10px;
+  text-align: center;
+}
+
+/* 默认地址样式 */
+.close__name--default {
+  position: relative;
+  border: 2px solid red;
+}
+
+/* 默认地址按钮 */
+.close__mrdz {
+  color: rosybrown;
+}
+
+.close__mrdz:hover {
+  color: rosybrown;
+}
+
+.close__name--default::before,
+.close__pay--checked::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  right: 0px;
+  transform: rotateZ(-94deg);
+  border-top: 1px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid red;
+  border-left: 1px solid transparent;
+}
+
+.close__name--default::after,
+.close__pay--checked::after {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 10px;
+  position: absolute;
+  bottom: 2px;
+  right: 1px;
+  transform: rotateZ(33deg);
+  border-top: 1px solid transparent;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  border-left: 1px solid transparent;
+  z-index: 1;
+}
+
+
+.close__sitesItem:hover .close__xingxi {
+  background-color: #fff3f3;
+}
+
+.close__xingxi {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  padding-left: 10px;
+  align-items: center;
+}
+
+.close__xingxitetx {
+  height: 100%;
+  flex: 8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 30px;
+}
+
+.close__usename,
+.close__dizxx {
+  margin-left: 10px;
+  height: 100%;
+}
+
+.close__xxBtns {
+  flex: 3;
+}
+
+.close__xxBtns>button {
+  height: 100%;
+}
+
+/* 显示更多 */
+.close__xiansshowqi {
+  display: inline-block;
+  position: relative;
+  padding-left: 10px;
+}
+
+.close__xiansshowqi::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  vertical-align: middle;
+  height: 10px;
+  line-height: 10px;
+  width: 9px;
+  background-image: url(https://misc.360buyimg.com/user/purchase/2.0.0/widget/consignee-scroll/i/addr-i.png);
+  background-repeat: no-repeat;
+}
+
+/* 收起 */
+.close__xiansshowqi--shoqi::after {
+  background-position: 0 -10px;
+}
+
+/* 付款方式 */
+.close__pay {
+  margin-top: 16px;
+}
+
+.close__payBox {
+  padding-left: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.close__payItem {
+  padding: 6px 10px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.close__payItem:hover {
+  border: 1px solid #aaa;
+}
+
+.close__payIcon {
+  margin-right: 4px;
+}
+
+.close__pay--disabled {
+  background-color: #f3f3f3;
+  cursor: no-drop;
+}
+
+.close__pay--checked {
+  position: relative;
+  border: 2px solid red;
+}
+
+.close__pay--checked:hover {
+  border: 2px solid red;
+}
+
+/* 清单 */
+.close__qingdan {
+  margin-top: 20px;
+}
+
+.close__spxingxi {
+  display: flex;
+  justify-content: left;
+  padding-top: 16px;
+  padding: 20px 30px;
+  background-color: #f3fbfe;
+}
+
+.close__spimg {
+  width: 100px;
+}
+
+.close__spimg img {
+  width: 100%;
+  height: 100%;
+}
+
+.close__spContent {
+  width: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 20px;
+  color: #666666;
+}
+
+.close__gge {
+  margin-top: 20px;
+}
+
+.close__spprice {
+  margin-left: 20px;
+}
+
+
+.close__spprice {
+  font-weight: bold;
+  color: #e4393c;
+}
+
+
+.close__num {
+  margin-left: 40px;
+}
+
+.close__chenlie {
+  margin-top: 20px;
+  padding: 10px 40px;  
+}
+
+.close__chenlie>div {
+  float: right;
+}
+
+.close__num {
+  color: #e4393c;
+}
+
+.close__allprice {
+  display: inline-block;
+  margin-left: 50px;
+}
+
+
+/* 提交订单 */
+.close__tijiao {
+  margin-top: 40px;
+  float: right;
+  width: 133px;
+  height: 36px;
+  padding: 6px 10px;
+  background-color: red;
+  color: #ffff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+}

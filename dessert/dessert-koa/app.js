@@ -6,9 +6,6 @@ const app = new koa()
 const cors = require('koa2-cors')
 // 引入bodyParser
 const bodyparser = require("koa-bodyparser")
-// const pv = require('./mid/koa-pv')
-// const session = require('koa-generic-session')
-const Redis = require('koa-redis')
 
 app.on('error', async (err, ctx) => {
   console.error('server error', err);
@@ -20,19 +17,6 @@ app.use(cors())
 // 注册bodyparser
 app.use(bodyparser())
 
-// session 加密
-// app.keys = ['keys', 'keyskeys']
-// app.use(session({
-//   store: new Redis()
-// }))
-
-// app.use(
-//   session({
-//     key: 'mt',
-//     prefix: 'mtpr',
-//     store: new Redis()
-//   })
-// )
 
 app.use(require('koa-static')(__dirname + '/public'))
 
@@ -71,7 +55,15 @@ app.use(rejister.routes())
 // 用户登录
 const login = require('./routers/front/login')
 app.use(login.routes())
-
+// 用户订单
+const order = require('./routers/front/order')
+app.use(order.routes())
+// 用户中心
+const user = require('./routers/front/user')
+app.use(user.routes())
+// 商品
+const goods = require('./routers/front/goods')
+app.use(goods.routes())
 // 前端首页
 const frontIndex = require('./routers/front/index')
 app.use(frontIndex.routes())

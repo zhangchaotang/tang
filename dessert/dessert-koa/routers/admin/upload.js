@@ -4,7 +4,7 @@ const router = Router()
 // 引入mysql
 const db = require('../../data/db')
 // 引入基地址
-const { baseUrl, adminKey } = require('../../config')
+const { baseUrl, adminKey, accessKeyId, accessKeySecret } = require('../../config')
 // 引入jwt
 const jwt = require('koa-jsonwebtoken')
 
@@ -18,9 +18,9 @@ const client = new OSS({
   region: 'oss-cn-beijing',
   //云账号AccessKey有所有API访问权限，建议遵循阿里云安全最佳实践，部署在服务端使用RAM子账号或STS，部署在客户端使用STS。
   // oss 中 密钥id
-  accessKeyId: 'LTAIWRgyQSSukvgN',
+  accessKeyId,
   // oss 访问权限代码
-  accessKeySecret: 'WCVHiGBQsKmoiIl8Y9DK0NZccT1Gdz',
+  accessKeySecret,
   //  存储仓库名字
   bucket: 'zhangchaotang',
 })

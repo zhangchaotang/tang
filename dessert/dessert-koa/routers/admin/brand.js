@@ -9,9 +9,17 @@ const { baseUrl, adminkey } = require('../../config')
 const jwt = require('koa-jsonwebtoken')
 
 // 获取品牌列表
-
 router.get(baseUrl + '/brand', async ctx => {
-  let row = await db.query('SELECT * FROM brand')
+  let row = await db.query('SELECT * FROM brand WHERE id != 1')
+  ctx.body = {
+    code: 200,
+    data: row
+  }
+})
+
+// 获取推荐品牌列表
+router.get(baseUrl + '/recBrand', async ctx => {
+  let row = await db.query('SELECT * FROM brand WHERE id != 1 ORDER BY recommend ASC  LIMIT 4 ')
   ctx.body = {
     code: 200,
     data: row
@@ -28,7 +36,6 @@ router.post(baseUrl + '/brand', async ctx => {
     message: '添加成功！'
   }
 })
-
 // 删除品牌
 router.delete(baseUrl + '/brand/:id', async ctx => {
   let id = ctx.params.id

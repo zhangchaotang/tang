@@ -1,0 +1,58 @@
+.tabHead {
+  display: flex;
+  justify-content: left;
+  border-bottom: 1px solid #b1678f;
+  margin-bottom: 24px;
+}
+
+
+.tabHead-item>span {
+  display: block;
+  color: #b1678f;
+  font-size: 14px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.tabHead-active>span {
+  font-weight: 600;
+}
+
+
+/* 设置表格样式 */
+.tabContent {
+  position: relative;
+  max-height: calc(600px - 46px);
+}
+
+.ant-table-thead>tr>th {
+  color: #8e5674;
+  font-weight: 500;
+  text-align: left;
+  background: #fdf4f9;
+  border: none;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+.ant-table-tbody>tr>td {
+  border-bottom: none;
+  -webkit-transition: all 0.3s, border 0s;
+  transition: all 0.3s, border 0s;
+  color: #988e94;
+}
+
+
+.ant-table-tbody>tr:nth-child(odd) {
+  background-color: #fdf8fb;
+}
+
+.ant-table-tbody>tr:nth-child(even) {
+  background-color: #fdf4f9;
+}
+
+.order .ant-btn {
+  width: 88px;
+}
+
+/* 设置表格样式完 */

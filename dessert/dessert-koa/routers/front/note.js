@@ -1,6 +1,6 @@
 const Router = require('koa-router')
 const router = Router()
-const { baseUrl } = require("../../config")
+const { baseUrl, accessKeyId, accessKeySecret } = require("../../config")
 // 引入redis
 const Redis = require('../../data/redis')
 // 实例化Redis
@@ -18,8 +18,8 @@ router.post(baseUrl + '/note', async ctx => {
   const Core = require('@alicloud/pop-core');
   // 创建实例
   let client = new Core({
-    accessKeyId: 'LTAIWRgyQSSukvgN', // 主账号AccessKey的ID，即Key
-    accessKeySecret: 'WCVHiGBQsKmoiIl8Y9DK0NZccT1Gdz',
+    accessKeyId, // 主账号AccessKey的ID，即Key
+    accessKeySecret,
     endpoint: 'https://dysmsapi.aliyuncs.com',
     apiVersion: '2017-05-25'
   });

@@ -17,6 +17,16 @@ router.get(baseUrl + '/classify', async ctx => {
   }
 })
 
+// 获取推荐分类
+router.get(baseUrl + '/recClassify', async ctx => {
+  // 获取推荐值最高的四个最高级分类
+  let row = await db.query('SELECT * FROM classify WHERE parent_class = 0 ORDER BY recommend ASC limit 4')
+  ctx.body = {
+    code: 200,
+    data: row
+  }
+})
+
 // 点击分类获取下商品
 router.get(baseUrl + '/classify/:id', async ctx => {
   let id = ctx.params.id // 获取分类id
@@ -36,7 +46,7 @@ router.get(baseUrl + '/classify/:id', async ctx => {
 })
 
 // 给分类添加商品（批量）
-router.post(baseUrl + '/classift/goods', async ctx => {
+router.post(baseUrl + '/classify/goods', async ctx => {
   let goods_list = ctx.request.body.goods_list.split(',') // 获取商品id
   let classify_id = ctx.request.body.classify_id
   //   // 开始插入数据
@@ -57,7 +67,7 @@ router.post(baseUrl + '/classift/goods', async ctx => {
 
 
 // 给分类删除商品（批量）
-router.delete(baseUrl + '/classift/goods', async ctx => {
+router.delete(baseUrl + '/classify/goods', async ctx => {
   let goods_list = ctx.request.body.goods_list.split(',') // 获取商品id
   let classify_id = ctx.request.body.classify_id
   //   // 开始插入数据

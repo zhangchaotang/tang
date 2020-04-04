@@ -1,0 +1,12 @@
+.account {}
+
+.accoutMain {
+  padding: 30px 24px;
+}
+
+.accotMain-left,
+.accotMain-right
+ {
+  width: 50%;
+  float: left;
+}

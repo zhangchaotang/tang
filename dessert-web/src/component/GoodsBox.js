@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/goodsBox.css'
 
 import $ from 'jquery'
-
+import { Link } from 'react-router-dom'
 
 export default function GoodsBox(props) {
 
@@ -20,7 +20,7 @@ export default function GoodsBox(props) {
     }
 
     $(`<div class=${str}>
-    <img src=${props.src} alt="" />
+    <img src=${props.data ? props.data.src : ''} alt="" />
     </div>`).appendTo('#root')
 
     $(`.${str}`).css({
@@ -58,10 +58,10 @@ export default function GoodsBox(props) {
       <div className="goodsBox">
         {/* 商品图片 */}
         <div className="imgBox">
-          <img src={props.src} alt="" />
+          <Link to={'/goodsPar/' + props.data.id}> <img src={props.data ? props.data.src : ''} alt="" /></Link>
         </div>
         {/* 商品名称 */}
-        <h6>米道</h6>
+        <h6><Link to={'/goodsPar/' + props.data.id}>{props.data.g_name}</Link></h6>
         {/* 商品简介 */}
         <p>
           天真、天然，是这款蛋糕唯一的出发点
@@ -74,7 +74,7 @@ export default function GoodsBox(props) {
         </div>
         <div className="price-conn">
           {/* 商品价格 */}
-          <span>¥298.00/454g(1.0磅)</span>
+          <span>¥{props.data ? props.data.g_price : ''}</span>
           {/* 操作按钮 */}
           <button onClick={(e) => { fly(e) }}>加入购物车</button>
         </div>

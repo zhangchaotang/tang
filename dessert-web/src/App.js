@@ -1,25 +1,33 @@
-import React from 'react'
-
+import React, { Suspense } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import './index.css'
+import Base from './component/Base'
 
-import Home from './Home'
-import Classify from './Classify'
-import Login from './Login'
-// import Classify from './Classify'
-import Rejister from './Rejister'
-import User from './User'
-import GoodsPar from './path/GoodsPar'
+const HeaderNav = React.lazy(() => import('./component/HeaderNav'))
+const Home = React.lazy(() => import('./path/Home'))
+const Classify = React.lazy(() => import('./path/Classify'))
+const Login = React.lazy(() => import('./path/Login'))
+const Rejister = React.lazy(() => import('./path/Rejister'))
+const User = React.lazy(() => import('./path/User'))
+const GoodsPar = React.lazy(() => import('./path/goods/GoodsPar'))
+const Close = React.lazy(() => import('./path/goods/Close'))
 
-export default function App() {
+export default function App(props) {
   return (
     <BrowserRouter>
-      <Route exact path="/" component={Home}></Route>
-      <Route path="/classify" component={Classify}></Route>
-      <Route path="/login" component={Login}></Route>
-      <Route path="/rejister" component={Rejister}></Route>
-      <Route path="/goodsPar" component={GoodsPar}></Route>
-      <Route path="/user" component={User}></Route>
+      <Suspense fallback='加载中...'>
+        <HeaderNav />
+        <Route exact path="/" component={Home}></Route>
+        <Route path="/classify/:id" component={Classify}></Route>
+        <Route path="/brand/:id" component={Classify}></Route>
+        <Route path="/login" component={Login}></Route>
+        <Route path="/rejister" component={Rejister}></Route>
+        <Route path="/goodsPar/:id" component={GoodsPar}></Route>
+        <Route path="/Close" component={Close}></Route>
+        <Route path="/user" component={User}></Route>
+      </Suspense>
+      <Base />
     </BrowserRouter>
   )
 }
+

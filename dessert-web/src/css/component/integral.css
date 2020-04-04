@@ -1,0 +1,114 @@
+.showIntegral {
+  margin: 10px 34px;
+  height: 134px;
+  background-color: #fff4fa;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+}
+
+.integralNum {
+  flex: 3;
+  height: 100%;
+  text-align: center;
+  padding: 34px 0;
+  border-right: 1px solid #ff9cd1;
+}
+
+.integral-num {
+  font-size: 44px;
+  color: #ff70bc;
+}
+
+.integralGo {
+  flex: 7;
+  position: relative;
+}
+
+.integralGo>button {
+  position: absolute;
+  width: 400px;
+  height: 64px;
+  color: #fff;
+  background-color: #ff70bc;
+  border: none;
+  font-size: 28px;
+  font-weight: 600;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.integralTile {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.goodsList {
+  position: relative;
+  display: flex;
+  min-height: 300px;
+  justify-content: left;
+  padding: 10px 0 0 30px;
+  flex-wrap: wrap;
+}
+
+.goodsItem {
+  width: 210px;
+  height: 254px;
+  margin-left: 10px;
+  box-shadow: 2px 8px 1px 2px #ebe7e9;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.goodsItem>img {
+  height: 200px;
+  width: 100%;
+  background-size: 100% auto;
+  display: flex;
+}
+
+.goodsItem>div {
+  height: 60px;
+  padding: 8px 14px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fbdbee;
+}
+
+.integral .left > p {
+  padding-left: 4px;
+  margin-bottom: 4px;
+}
+
+.integral .right  {
+  display: flex;
+  align-items: center;
+}
+
+.goodsItem p {
+  margin: 0;
+  width: 100px;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pagination {
+  margin-top: 20px;
+
+}
+.pagination > ul {
+  float: right;
+}
+
+
+.loading {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+

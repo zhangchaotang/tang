@@ -1,20 +1,31 @@
 
-
-
 .showPersonal {
-  width: 100%;
-  height: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 50px;
+  width: 1200px;
+  height: 200px;
   background-color: #fcf1f7;
+  box-sizing: border-box;
+}
+
+/* 用户头像 */
+.userIcon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+}
+.userIcon > img {
+  width: 100%;
+  border-radius:50%;
 }
 
 .userBox {
   display: flex;
   justify-content: left;
-  margin-top: 20px;
+  margin-top: 14px;
 }
-
-/* .useOption {
-} */
 
 .userItem {
   width: 184px;
@@ -25,6 +36,7 @@
   font-size: 14px;
   color: #b1678f;
   background-color: #fcf1f7;
+  cursor: pointer;
 }
 
 .userActive {
@@ -33,7 +45,8 @@
 }
 
 .useShow {
-  margin-left: 20px;
-  height: 600px;
+  margin-left: 30px;
+  min-height: 600px;
   width: 960px;
 }
+

@@ -1,0 +1,88 @@
+.opeBalance {
+  width: 100%;
+  height: 136px;
+  display: flex;
+  margin: 20px 0 0 0;
+  background-color: #fff4fa;
+}
+
+.userName,
+.balanceNum {
+  flex: 2;
+  padding: 20px 0 10px 30px;
+}
+
+.userName>span {
+  color: #ff70bc;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.balanceNum>p {
+  margin-bottom: 9px;
+}
+
+.balanceBtns {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.balanceBtns>button {
+  margin-left: 30px;
+  width: 100px;
+  height: 40px;
+  background-color: #ff70bc;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+
+.big {
+  color: #ff70bc;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.tiny {
+  color: #ff70bc;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+.balanceBtns {
+  flex: 5;
+}
+
+.tabContent {
+  margin-top: 20px;
+}
+
+/* 充值 */
+.pay {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.payItem {
+  width: 100px;
+  height: 100px;
+}
+.payItem > img {
+  height: 100%;
+  background-size: 100% auto;
+}
+
+.payItem > p {
+  margin: 0;
+  text-align: center;
+}

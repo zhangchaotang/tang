@@ -4,9 +4,11 @@ module.exports = {
     port: '3306',
     user: 'root',
     password: 'Zct125869!',
-    database: 'dessert'
+    database: 'customer21'
   },
   adminKey: 'jdnakjdnwinqkwmklsdnjakdbaldnakddlnsdvjkab',
   webKey: 'dadbasjdbajsdnjsdbvjdbvjkdnvkdnvksnklsnlsdvnsld',
-  baseUrl:'/api/v1'
+  baseUrl:'/api/v1',
+  accessKeyId:'LTAIWRgyQSSukvgN',
+  accessKeySecret:'WCVHiGBQsKmoiIl8Y9DK0NZccT1Gdz'
 }

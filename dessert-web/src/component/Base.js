@@ -37,7 +37,7 @@ export default function Base(props) {
       </div>
       {/* 网站许可证 */}
       <div className="base-root">
-        <p>Copyright© 信德利蛋糕官网商城 2007-2018, 版权所有 京ICP备14006254号-1</p>
+        <p>Copyright© 信德利蛋糕官网商城 2007-2018, 版权所有 <a href="http://beian.miit.gov.cn">桂ICP备19009291号-1</a></p>
       </div>
     </div>
   )

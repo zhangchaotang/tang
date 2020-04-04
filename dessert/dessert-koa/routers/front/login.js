@@ -14,18 +14,18 @@ const md5 = require('../../tools/koa-md5')
 
 router.post(baseUrl + '/login', async ctx => {
   let phone = ctx.request.body.phone
-  let password = ctx.request.body.password
-
+  let password = await md5.MD5(ctx.request.body.password)
   let row = await db.query('SELECT * FROM user WHERE username = ?', phone)
   if (row.length == 0) return ctx.body = { code: 400, error: '用户不存在！' }
   if (row[0].password != password) return ctx.body = { code: 400, error: '密码错误！' }
   // 生成token 
   const secret = await md5.MD5(webKey)
-  const token = jwt.sign(row[0], secret, { expiresIn: 1 * 24 * 7 + 'h' });
+  const token = jwt.sign({id:row[0].id}, secret, { expiresIn: '7d' });
   ctx.body = {
     code: 200,
     message: '登录成功！',
-    token
+    token,
+    data: row[0]
   }
 
 })

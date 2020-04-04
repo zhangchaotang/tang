@@ -15,25 +15,28 @@ const jwt = require('koa-jsonwebtoken')
 router.get(baseUrl + '/index', async ctx => {
   // 获取到推荐标题
 
-  // try {
-
   let getTitle = 'SELECT * FROM recommend'
   let titleRow = await db.query(getTitle)
   // 构建一个数组 存储数据
   let data = []
   try {
-
     //  获取推荐商品消息
     for (let k = 0; k < titleRow.length; k++) {
 
-      let getGoods = `SELECT b.* FROM recommend_goods a
-                      LEFT JOIN goods b ON a.g_id = b.id
+      let getGoods = `SELECT b.*,c.ingredient src FROM recommend_goods a
+                      LEFT JOIN goods b ON a.g_id = b.id LEFT JOIN particulars_img c ON b.id = c.g_id
                       WHERE a.r_id = ?
+                      LIMIT 16
                       `
 
       let row = await db.query(getGoods, titleRow[k].id)
 
-      data.push({ title: titleRow[k].r_title, content: row })
+      data.push({
+        title: titleRow[k].r_title,
+        icon: titleRow[k].icon,
+        link: titleRow[k].link,
+        content: row
+      })
       if (k == titleRow.length - 1) {
         ctx.body = {
           code: 200,

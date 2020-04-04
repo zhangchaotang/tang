@@ -1,0 +1,436 @@
+{
+  "id": "1302056",
+  "name": "1",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "92103",
+      "name": "iconfont- 安全防护",
+      "font_class": "iconfontanquanfanghu",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "109980",
+      "name": "iconfont-29",
+      "font_class": "iconfont29",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "162638",
+      "name": "iconfont-编辑",
+      "font_class": "iconfontbianji",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "292784",
+      "name": "iconfont-下载",
+      "font_class": "iconfonticonfontxiazai",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "360129",
+      "name": "iconfont-tianbaoren copy",
+      "font_class": "iconfonttianbaorencopy",
+      "unicode": "e689",
+      "unicode_decimal": 59017
+    },
+    {
+      "icon_id": "369500",
+      "name": "iconfont-回答",
+      "font_class": "iconfonthuida",
+      "unicode": "e6ba",
+      "unicode_decimal": 59066
+    },
+    {
+      "icon_id": "381017",
+      "name": "iconfont-zuobiao copy 2",
+      "font_class": "iconfontzuobiaocopy2",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "413349",
+      "name": "iconfont-shijian copy",
+      "font_class": "iconfontshijiancopy",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "545491",
+      "name": "iconfont-x",
+      "font_class": "iconfontx",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "579107",
+      "name": "iconfont",
+      "font_class": "iconfont",
+      "unicode": "e763",
+      "unicode_decimal": 59235
+    },
+    {
+      "icon_id": "642439",
+      "name": "iconfont-G",
+      "font_class": "iconfontg",
+      "unicode": "e6cc",
+      "unicode_decimal": 59084
+    },
+    {
+      "icon_id": "652821",
+      "name": "iconfont-26",
+      "font_class": "iconfont-26",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "670319",
+      "name": "icon-font_电话",
+      "font_class": "iconfontdianhua",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "670322",
+      "name": "icon-font_拍照",
+      "font_class": "iconfontpaizhao",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "670324",
+      "name": "icon-font_添加",
+      "font_class": "iconfonttianjia",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "670325",
+      "name": "icon-font_图片",
+      "font_class": "iconfonttupian",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "670361",
+      "name": "icon-font_收藏",
+      "font_class": "iconfontshoucang",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "670804",
+      "name": "icon-font-发出",
+      "font_class": "iconfontfachu",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "670806",
+      "name": "icon-font-用户",
+      "font_class": "iconfontyonghu",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "766429",
+      "name": "iconfont",
+      "font_class": "iconfont1",
+      "unicode": "e68a",
+      "unicode_decimal": 59018
+    },
+    {
+      "icon_id": "894252",
+      "name": "iconfont_ food4",
+      "font_class": "iconfontfood4",
+      "unicode": "e67c",
+      "unicode_decimal": 59004
+    },
+    {
+      "icon_id": "1031754",
+      "name": "icon_font_mic",
+      "font_class": "iconfontmic",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "1031785",
+      "name": "icon_font_delete",
+      "font_class": "iconfontdelete",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "1074202",
+      "name": "iconfont-mm",
+      "font_class": "i-mm",
+      "unicode": "e7e9",
+      "unicode_decimal": 59369
+    },
+    {
+      "icon_id": "1163073",
+      "name": "iconfont-20",
+      "font_class": "iconfont20",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "1163169",
+      "name": "iconfont-23",
+      "font_class": "iconfont23",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "1175719",
+      "name": "iconfont-37",
+      "font_class": "iconfont37",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "1181724",
+      "name": "icon--font-15",
+      "font_class": "iconfont15",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "1323318",
+      "name": "iconfont",
+      "font_class": "mail",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "1359187",
+      "name": "iconfont-充值",
+      "font_class": "iconfont-chongzhi",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "1369997",
+      "name": "iconfont-提现",
+      "font_class": "iconfonttixian",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "1446906",
+      "name": "iconfont",
+      "font_class": "coat",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "1448599",
+      "name": "iconfont",
+      "font_class": "Coin",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "1448601",
+      "name": "iconfont",
+      "font_class": "code",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "1448603",
+      "name": "iconfont",
+      "font_class": "edit",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "1448609",
+      "name": "iconfont",
+      "font_class": "Friends",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "1448610",
+      "name": "iconfont",
+      "font_class": "info",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "1448617",
+      "name": "iconfont",
+      "font_class": "message",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "1448620",
+      "name": "iconfont",
+      "font_class": "quit",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "1448621",
+      "name": "iconfont",
+      "font_class": "Monitor",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "1448625",
+      "name": "iconfont",
+      "font_class": "Scan",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "2084303",
+      "name": "iconfont-cardid copy",
+      "font_class": "iconfont-cardidcopy",
+      "unicode": "e96d",
+      "unicode_decimal": 59757
+    },
+    {
+      "icon_id": "2878332",
+      "name": "iconfont-6",
+      "font_class": "iconfont-",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "3448177",
+      "name": "iconfont",
+      "font_class": "CS-Icons-",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "3489897",
+      "name": "iconfont",
+      "font_class": "huodong",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "3608605",
+      "name": "iconfont_info",
+      "font_class": "info1",
+      "unicode": "e6ee",
+      "unicode_decimal": 59118
+    },
+    {
+      "icon_id": "3631059",
+      "name": "iconfont-platform entrance",
+      "font_class": "iconfont-right",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "4315225",
+      "name": "iconfont-5",
+      "font_class": "iconfont-1",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "4595674",
+      "name": "iconfont-sousuo-3 co",
+      "font_class": "iconfont-sousuo-co",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "5861138",
+      "name": "iconfont-platform entrance",
+      "font_class": "iconfontplatformentrance",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "5861139",
+      "name": "iconfont-platform entrance",
+      "font_class": "iconfontplatformentrance1",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "5861142",
+      "name": "iconfont-platform entrance",
+      "font_class": "iconfontplatformentrance-copy-copy",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "6253880",
+      "name": "iconfont icon-jingga",
+      "font_class": "iconfonticon-jingga",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "6354190",
+      "name": "iconfont",
+      "font_class": "icon",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "6532927",
+      "name": "iconfont-5",
+      "font_class": "safe",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "10074418",
+      "name": "icon_font color",
+      "font_class": "icon_fontcolor",
+      "unicode": "e99d",
+      "unicode_decimal": 59805
+    },
+    {
+      "icon_id": "11915608",
+      "name": "iconfont_show song_outline@1x",
+      "font_class": "iconfont_showsong_outlinex",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "12881597",
+      "name": "问号",
+      "font_class": "wenhao",
+      "unicode": "e702",
+      "unicode_decimal": 59138
+    },
+    {
+      "icon_id": "13345443",
+      "name": "icon_font",
+      "font_class": "font",
+      "unicode": "ea91",
+      "unicode_decimal": 60049
+    },
+    {
+      "icon_id": "7881779",
+      "name": "播放",
+      "font_class": "bofang-copy",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "7991683",
+      "name": "添加人员",
+      "font_class": "tianjiarenyuan",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    }
+  ]
+}

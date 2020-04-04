@@ -6,12 +6,13 @@
 }
 
 /* 商品图片盒子 */
-/* .goodsBox .imgBox {
+.goodsBox .imgBox {
   width: 263px;
   height: 230px;
-} */
+  overflow: hidden;
+}
 
-.goodsBox .imgBox>img {
+.goodsBox .imgBox img {
   width: 100%;
   background: #fafafa center no-repeat;
   background-size: auto 100%;
