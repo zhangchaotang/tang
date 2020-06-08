@@ -10,7 +10,7 @@ import Axios from 'axios';
 const { TabPane } = Tabs;
 
 
-export default function GoodsPar() {
+export default function GoodsPar(props) {
   const [gooimgList, setGooimgList] = useState([
     'https://zhangchaotang.oss-cn-beijing.aliyuncs.com/dessert/23-5.jpg',
     'https://zhangchaotang.oss-cn-beijing.aliyuncs.com/dessert/Snipaste_2019-10-17_08-15-55.jpg',
@@ -35,6 +35,8 @@ export default function GoodsPar() {
       content: '味道很不错',
     }
   ])
+
+  let id = props.match.params.id
 
   for (let i = 0; i < 3; i++) {
     listData.push();
@@ -110,19 +112,48 @@ export default function GoodsPar() {
 
   // 商品规格
   const [spec, setSpec] = useState([])
+  // 商品属性
+  const [goodsAttr, getGoodsAttr] = useState(null)
+  // 商品评论
+  const [pingl, setPingl] = useState([])
   // 规格位置
   const [index, setIndex] = useState(0)
   const [goodsNum, setGoodsNum] = useState(1)
 
   useEffect(() => {
     getspec()
+    getpingl()
   }, [])
 
   // 获取规格
   const getspec = () => {
-    Axios.get('/spec').then(res => {
+    Axios.get('/spec/' + id).then(res => {
       if (res.data.code === 200) {
         setSpec(res.data.data)
+      }
+    })
+  }
+  // 获取商品图片
+  const getIng = () => {
+    Axios.get('/spec/' + id).then(res => {
+      if (res.data.code === 200) {
+        setSpec(res.data.data)
+      }
+    })
+  }
+  // 获取商品属性
+  const getAttr = () => {
+    Axios.get('/goodsAttr/' + id).then(res => {
+      if (res.data.code === 200) {
+        getGoodsAttr(res.data.data)
+      }
+    })
+  }
+  // 获取商品评论
+  const getpingl = () => {
+    Axios.get('/goodsComment/' + id).then(res => {
+      if (res.data.code === 200) {
+        setPingl(res.data.data)
       }
     })
   }

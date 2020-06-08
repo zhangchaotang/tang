@@ -7,6 +7,7 @@ import Axios from 'axios'
 import 'antd/dist/antd.css';
 
 Axios.defaults.baseURL = 'http://127.0.0.1:9960/api/v1'
+// 'http://127.0.0.1:9960/api/v1'
 //'http://zhangchaotang.cn:9960/api/v1'
 
 
